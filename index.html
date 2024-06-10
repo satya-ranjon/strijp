@@ -7,9 +7,9 @@
   </head>
   <body>
     <section class="hero">
-      <div class="container">
+      <div class="nav-bar-container">
         <nav class="nav-bar">
-          <img src="./assets/logo.svg" class="logo" alt="" />
+          <img id="logo" src="./assets/logo.svg" class="logo" alt="" />
           <nav class="menu-icons">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +17,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
+              id="icon1"
               class="icon">
               <path
                 stroke-linecap="round"
@@ -30,6 +31,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
+              id="icon2"
               class="icon">
               <path
                 stroke-linecap="round"
@@ -43,6 +45,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
+              id="icon3"
               class="icon">
               <path
                 stroke-linecap="round"
@@ -51,6 +54,8 @@
             </svg>
           </nav>
         </nav>
+      </div>
+      <div class="container" style="padding-top: 15rem">
         <h1 class="title">WELKOM OP <span class="text-bg">STRIJP-T</span></h1>
         <h2 class="title-2">
           EEN BEDRIJVENPARK MET KARAKTER, WAAR WIJ VOL ENERGIE ONDERNEMEN.
@@ -117,5 +122,33 @@
     <script
       src="https://kit.fontawesome.com/722bf37857.js"
       crossorigin="anonymous"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const navBarContainer = document.querySelector(".nav-bar-container");
+        const navbar = document.querySelector(".nav-bar");
+        const logo = document.getElementById("logo");
+        const icon1 = document.getElementById("icon1");
+        const icon2 = document.getElementById("icon2");
+        const icon3 = document.getElementById("icon3");
+
+        if (window.scrollY > 50) {
+          navBarContainer.classList.add("scrolled");
+          logo.src = "./assets/scroll-logo.svg";
+          logo.classList.add("scrolled");
+          navbar.classList.add("scrolled");
+          icon1.classList.add("scrolled");
+          icon2.classList.add("scrolled");
+          icon3.classList.add("scrolled");
+        } else {
+          navBarContainer.classList.remove("scrolled");
+          logo.src = "./assets/logo.svg";
+          logo.classList.remove("scrolled");
+          navbar.classList.remove("scrolled");
+          icon1.classList.remove("scrolled");
+          icon2.classList.remove("scrolled");
+          icon3.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>

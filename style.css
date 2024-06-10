@@ -18,14 +18,34 @@
 }
 .logo {
   width: 5.2rem;
+  transition: height 0.3s ease-in-out;
 }
-
+.logo.scrolled {
+  height: 3.5rem;
+}
 .nav-bar {
   padding: 2rem 0rem;
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
+  width: 80%;
+  transition: padding 0.3s ease-in-out;
+}
+.nav-bar.scrolled {
+  padding: 1rem 0rem;
+}
+.nav-bar-container {
+  position: fixed;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.nav-bar-container.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 .menu-icons {
   display: flex;
@@ -33,9 +53,15 @@
   justify-content: start;
   gap: 2rem;
 }
+
 .icon {
   color: white;
   width: 3rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-bar .icon.scrolled {
+  color: black;
 }
 .title {
   font-weight: 700;
