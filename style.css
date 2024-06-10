@@ -151,6 +151,9 @@
   .container {
     max-width: 90%;
   }
+  .nav-bar {
+    width: 90%;
+  }
   .bebouw {
     gap: 2rem;
   }
